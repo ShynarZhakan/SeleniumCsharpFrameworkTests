@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<EnableXunitDependencyInjectionDefaultTestFrameworkAttribute>true</EnableXunitDependencyInjectionDefaultTestFrameworkAttribute>
+		<Nullable>enable</Nullable>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ExtentReports" Version="5.0.4" />
+		<PackageReference Include="Reqnroll" Version="3.2.0" />
+		<PackageReference Include="Reqnroll.Xunit" Version="3.2.0" />
+		<PackageReference Include="xunit" Version="2.9.2" />
+		<PackageReference Include="xunit.analyzers" Version="1.25.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.5.7">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+		<PackageReference Include="Reqnroll.Microsoft.Extensions.DependencyInjection" Version="3.2.0" />
+		<PackageReference Include="databinding.LivingDoc.ExecutionDataCollector" Version="7.2.0" />
+		<PackageReference Include="FluentAssertions" Version="8.8.0" />
+		<PackageReference Include="Selenium.Support" Version="4.36.0" />
+		<PackageReference Include="Selenium.WebDriver" Version="4.36.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- ONLY the framework, not the unit-test project -->
+		<ProjectReference Include="..\EaApplicationTest\EaApplicationTest.csproj" />
+		<ProjectReference Include="..\EaFramework\EaFramework.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<Compile Update="Startup.cs">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Compile>
+	</ItemGroup>
+</Project>
