@@ -27,6 +27,18 @@ jobs:
         services: |
           ea_api
           ea_webapp
+    - name: Wait for web app to be ready
+      run: |
+        for i in {1..30}; do
+          if curl -sSf http://localhost:5001/ > /dev/null; then
+            echo "Web app is up"
+            exit 0
+          fi
+          sleep 2
+        done
+        echo "Web app failed to start in time"
+        exit 1
+
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
