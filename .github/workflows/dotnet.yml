@@ -33,6 +33,8 @@ jobs:
       run: dotnet build --no-restore
     - name: Run headless test
       uses: coactions/setup-xvfb@v1.0.1
+      env:
+        TestSettings__ApplicationUrl: "http://localhost:5001"
       with:
        working-directory: ./EaApplicationTest
        run: dotnet test --no-build --verbosity normal
