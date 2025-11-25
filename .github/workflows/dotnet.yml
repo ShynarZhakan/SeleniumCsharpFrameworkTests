@@ -26,7 +26,11 @@ jobs:
         down-flags: "--volumes"
         services: |
           ea_api
+            ports:
+              - "8001:8001"  
           ea_webapp
+          ports:
+              - "8000:8000" 
     - name: Wait for web app to be ready
       run: |
         for i in {1..30}; do
