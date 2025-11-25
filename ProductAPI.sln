@@ -15,6 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EaApp", "EaApp", "{02EA681E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EaTests", "EaTests", "{99E320F0-8137-47A7-924C-7B9793583880}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EAApp_LocalMachine", "EAApp_LocalMachine", "{946B74B5-3C7D-4D5B-8BF0-C3A6CABFED38}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.DS_Store = ..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.DS_Store
+		..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.gitattributes = ..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.gitattributes
+		..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.gitignore = ..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\.gitignore
+		..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\docker-compose.yml = ..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\docker-compose.yml
+		..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\ProductAPI.sln = ..\..\..\source\repos\EAApp_LocalMachine\EAApp_LocalMachine\ProductAPI.sln
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
